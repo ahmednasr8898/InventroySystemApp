@@ -19,6 +19,7 @@
 		796DDE70256B2CC200ED7963 /* AddProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796DDE6F256B2CC200ED7963 /* AddProductViewController.swift */; };
 		796DDE75256B34E500ED7963 /* Product+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796DDE73256B34E500ED7963 /* Product+CoreDataClass.swift */; };
 		796DDE76256B34E500ED7963 /* Product+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796DDE74256B34E500ED7963 /* Product+CoreDataProperties.swift */; };
+		798DD05D256BF37300253867 /* DetailsProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798DD05C256BF37300253867 /* DetailsProductViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		796DDE6F256B2CC200ED7963 /* AddProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductViewController.swift; sourceTree = "<group>"; };
 		796DDE73256B34E500ED7963 /* Product+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Product+CoreDataClass.swift"; sourceTree = "<group>"; };
 		796DDE74256B34E500ED7963 /* Product+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Product+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		798DD05C256BF37300253867 /* DetailsProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsProductViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 		796DDE63256B25B900ED7963 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				798DD05B256BF34300253867 /* DetailsProduct */,
 				796DDE6E256B2CA500ED7963 /* AddProduct */,
 				796DDE67256B26DC00ED7963 /* Home */,
 			);
@@ -131,6 +134,14 @@
 				796DDE6F256B2CC200ED7963 /* AddProductViewController.swift */,
 			);
 			path = AddProduct;
+			sourceTree = "<group>";
+		};
+		798DD05B256BF34300253867 /* DetailsProduct */ = {
+			isa = PBXGroup;
+			children = (
+				798DD05C256BF37300253867 /* DetailsProductViewController.swift */,
+			);
+			path = DetailsProduct;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,6 +219,7 @@
 				796DDE6B256B271300ED7963 /* HomeTableViewCell.swift in Sources */,
 				796DDE70256B2CC200ED7963 /* AddProductViewController.swift in Sources */,
 				796DDE75256B34E500ED7963 /* Product+CoreDataClass.swift in Sources */,
+				798DD05D256BF37300253867 /* DetailsProductViewController.swift in Sources */,
 				796DDE4C256B253A00ED7963 /* AppDelegate.swift in Sources */,
 				796DDE4E256B253A00ED7963 /* SceneDelegate.swift in Sources */,
 				796DDE76256B34E500ED7963 /* Product+CoreDataProperties.swift in Sources */,

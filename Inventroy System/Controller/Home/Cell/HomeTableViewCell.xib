@@ -74,9 +74,6 @@
                         <state key="normal" title="SALE">
                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </state>
-                        <connections>
-                            <action selector="saleQuantityOnClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="liv-b2-oIk"/>
-                        </connections>
                     </button>
                 </subviews>
                 <constraints>
@@ -92,6 +89,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="SaleButton" destination="4We-JT-PpT" id="R78-t4-O3N"/>
                 <outlet property="nameLabel" destination="YXj-Is-eS2" id="xSj-2D-M3O"/>
                 <outlet property="priceLabel" destination="KVD-Ah-69Y" id="QYm-Ee-2rU"/>
                 <outlet property="quantityLabel" destination="z4l-ff-Nu0" id="SbD-eQ-63s"/>

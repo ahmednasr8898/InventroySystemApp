@@ -4,7 +4,6 @@
 //
 //  Created by Ahmed Nasr on 11/23/20.
 //
-
 import UIKit
 import CoreData
 class AddProductViewController: UIViewController {
@@ -15,9 +14,10 @@ class AddProductViewController: UIViewController {
     @IBOutlet weak var productImageView: UIImageView!
     
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    var idUserDefauls = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     @IBAction func chooseImageOnClick(_ sender: UIButton) {
         let picker = UIImagePickerController()
@@ -34,7 +34,10 @@ class AddProductViewController: UIViewController {
         print("Success")
         //Save Data
         let product = Product(context: self.context)
-        product.productID = Int64(UserDefaults.standard.integer(forKey: "id") + 1)
+        let id = getID()
+        setID(id: id + 1)
+        product.productID = Int64(id + 1)
+        idUserDefauls += 1
         product.productName = name
         product.productPrice = Int64(price) ?? 0
         product.productQuantity = Int64(quantity) ?? 0
@@ -57,5 +60,36 @@ extension AddProductViewController: UIImagePickerControllerDelegate,UINavigation
     }
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController){
         dismiss(animated: true, completion: nil)
+    }
+}
+extension AddProductViewController{
+    func setID(id: Int){
+        UserDefaults.standard.set(id, forKey: "productID")
+    }
+    func getID()->Int{
+        guard let id = UserDefaults.standard.object(forKey: "productID") else { return 0 }
+        return id as! Int
+    }
+}
+extension AddProductViewController{
+    func deleteAllData() {
+        do{
+            //1- fetch all data
+            let results = try self.context.fetch(Product.fetchRequest())
+            for res in results{
+                //2- delete
+                self.context.delete(res as! NSManagedObject)
+            }
+        }catch{
+            print("Error in deleteAllDataOnClick function: ", error.localizedDescription)
+        }
+        do{
+            //3- save change
+            try self.context.save()
+        }catch{
+            print(error.localizedDescription)
+        }
+        //4- realod data in tableView
+        //self.fetchData()
     }
 }

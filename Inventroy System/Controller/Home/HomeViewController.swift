@@ -4,14 +4,13 @@
 //
 //  Created by Ahmed Nasr on 11/23/20.
 //
-
 import UIKit
-
 class HomeViewController: UIViewController {
 
     @IBOutlet weak var productTableView: UITableView!
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var arrOfProducts = [Product]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTableView()
@@ -29,7 +28,6 @@ class HomeViewController: UIViewController {
         navigationController?.pushViewController(storyboard, animated: true)
     }
 }
-//TableView With DataSource
 extension HomeViewController: UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return arrOfProducts.count
@@ -40,13 +38,30 @@ extension HomeViewController: UITableViewDataSource{
         cell.nameLabel.text = item.productName
         cell.priceLabel.text = String(item.productPrice)
         cell.quantityLabel.text = String(item.productQuantity)
+        cell.SaleButton.addAction(UIAction(title: "Action", image: nil, identifier: nil, discoverabilityTitle: "", attributes: .destructive, state: .on, handler: { (_) in
+            print("sale product")
+            cell.quantityLabel.text = String(item.productQuantity - 1)
+            self.arrOfProducts[indexPath.row].productQuantity -= 1
+            try! self.context.save()
+        }), for: .touchUpInside)
         return cell
     }
 }
-//TableView With delegate
 extension HomeViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 150
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let idProduct = arrOfProducts[indexPath.row].productID
+        let nameProduct = arrOfProducts[indexPath.row].productName
+        let priceProduct = arrOfProducts[indexPath.row].productPrice
+        let quantityProduct = arrOfProducts[indexPath.row].productQuantity
+        guard let storyboard = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DetailsProductViewController") as? DetailsProductViewController else{return}
+        storyboard.idProduct = idProduct
+        storyboard.nameProduct = nameProduct
+        storyboard.priceProduct = priceProduct
+        storyboard.quantityProduct = quantityProduct
+        navigationController?.pushViewController(storyboard, animated: true)
     }
 }
 extension HomeViewController{
@@ -61,3 +76,4 @@ extension HomeViewController{
         }
     }
 }
+
