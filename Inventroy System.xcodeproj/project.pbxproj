@@ -9,23 +9,33 @@
 /* Begin PBXBuildFile section */
 		796DDE4C256B253A00ED7963 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796DDE4B256B253A00ED7963 /* AppDelegate.swift */; };
 		796DDE4E256B253A00ED7963 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796DDE4D256B253A00ED7963 /* SceneDelegate.swift */; };
-		796DDE50256B253A00ED7963 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796DDE4F256B253A00ED7963 /* ViewController.swift */; };
+		796DDE50256B253A00ED7963 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796DDE4F256B253A00ED7963 /* HomeViewController.swift */; };
 		796DDE53256B253A00ED7963 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 796DDE51256B253A00ED7963 /* Main.storyboard */; };
 		796DDE56256B253A00ED7963 /* Inventroy_System.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 796DDE54256B253A00ED7963 /* Inventroy_System.xcdatamodeld */; };
 		796DDE58256B254100ED7963 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 796DDE57256B254100ED7963 /* Assets.xcassets */; };
 		796DDE5B256B254100ED7963 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 796DDE59256B254100ED7963 /* LaunchScreen.storyboard */; };
+		796DDE6B256B271300ED7963 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796DDE69256B271300ED7963 /* HomeTableViewCell.swift */; };
+		796DDE6C256B271300ED7963 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 796DDE6A256B271300ED7963 /* HomeTableViewCell.xib */; };
+		796DDE70256B2CC200ED7963 /* AddProductViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796DDE6F256B2CC200ED7963 /* AddProductViewController.swift */; };
+		796DDE75256B34E500ED7963 /* Product+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796DDE73256B34E500ED7963 /* Product+CoreDataClass.swift */; };
+		796DDE76256B34E500ED7963 /* Product+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796DDE74256B34E500ED7963 /* Product+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		796DDE48256B253A00ED7963 /* Inventroy System.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Inventroy System.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		796DDE4B256B253A00ED7963 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		796DDE4D256B253A00ED7963 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		796DDE4F256B253A00ED7963 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		796DDE4F256B253A00ED7963 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		796DDE52256B253A00ED7963 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		796DDE55256B253A00ED7963 /* Inventroy_System.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Inventroy_System.xcdatamodel; sourceTree = "<group>"; };
 		796DDE57256B254100ED7963 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		796DDE5A256B254100ED7963 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		796DDE5C256B254100ED7963 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		796DDE69256B271300ED7963 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		796DDE6A256B271300ED7963 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
+		796DDE6F256B2CC200ED7963 /* AddProductViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductViewController.swift; sourceTree = "<group>"; };
+		796DDE73256B34E500ED7963 /* Product+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Product+CoreDataClass.swift"; sourceTree = "<group>"; };
+		796DDE74256B34E500ED7963 /* Product+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Product+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +68,69 @@
 		796DDE4A256B253A00ED7963 /* Inventroy System */ = {
 			isa = PBXGroup;
 			children = (
+				796DDE65256B25C800ED7963 /* Model */,
+				796DDE64256B25C100ED7963 /* View */,
+				796DDE63256B25B900ED7963 /* Controller */,
 				796DDE4B256B253A00ED7963 /* AppDelegate.swift */,
 				796DDE4D256B253A00ED7963 /* SceneDelegate.swift */,
-				796DDE4F256B253A00ED7963 /* ViewController.swift */,
-				796DDE51256B253A00ED7963 /* Main.storyboard */,
 				796DDE57256B254100ED7963 /* Assets.xcassets */,
-				796DDE59256B254100ED7963 /* LaunchScreen.storyboard */,
 				796DDE5C256B254100ED7963 /* Info.plist */,
 				796DDE54256B253A00ED7963 /* Inventroy_System.xcdatamodeld */,
 			);
 			path = "Inventroy System";
+			sourceTree = "<group>";
+		};
+		796DDE63256B25B900ED7963 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				796DDE6E256B2CA500ED7963 /* AddProduct */,
+				796DDE67256B26DC00ED7963 /* Home */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		796DDE64256B25C100ED7963 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				796DDE51256B253A00ED7963 /* Main.storyboard */,
+				796DDE59256B254100ED7963 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		796DDE65256B25C800ED7963 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				796DDE73256B34E500ED7963 /* Product+CoreDataClass.swift */,
+				796DDE74256B34E500ED7963 /* Product+CoreDataProperties.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		796DDE67256B26DC00ED7963 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				796DDE68256B26E600ED7963 /* Cell */,
+				796DDE4F256B253A00ED7963 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		796DDE68256B26E600ED7963 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				796DDE69256B271300ED7963 /* HomeTableViewCell.swift */,
+				796DDE6A256B271300ED7963 /* HomeTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		796DDE6E256B2CA500ED7963 /* AddProduct */ = {
+			isa = PBXGroup;
+			children = (
+				796DDE6F256B2CC200ED7963 /* AddProductViewController.swift */,
+			);
+			path = AddProduct;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,6 +192,7 @@
 			files = (
 				796DDE5B256B254100ED7963 /* LaunchScreen.storyboard in Resources */,
 				796DDE58256B254100ED7963 /* Assets.xcassets in Resources */,
+				796DDE6C256B271300ED7963 /* HomeTableViewCell.xib in Resources */,
 				796DDE53256B253A00ED7963 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,9 +204,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				796DDE50256B253A00ED7963 /* ViewController.swift in Sources */,
+				796DDE50256B253A00ED7963 /* HomeViewController.swift in Sources */,
+				796DDE6B256B271300ED7963 /* HomeTableViewCell.swift in Sources */,
+				796DDE70256B2CC200ED7963 /* AddProductViewController.swift in Sources */,
+				796DDE75256B34E500ED7963 /* Product+CoreDataClass.swift in Sources */,
 				796DDE4C256B253A00ED7963 /* AppDelegate.swift in Sources */,
 				796DDE4E256B253A00ED7963 /* SceneDelegate.swift in Sources */,
+				796DDE76256B34E500ED7963 /* Product+CoreDataProperties.swift in Sources */,
 				796DDE56256B253A00ED7963 /* Inventroy_System.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
