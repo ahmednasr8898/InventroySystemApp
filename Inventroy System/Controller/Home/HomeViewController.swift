@@ -38,11 +38,18 @@ extension HomeViewController: UITableViewDataSource{
         cell.nameLabel.text = item.productName
         cell.priceLabel.text = String(item.productPrice)
         cell.quantityLabel.text = String(item.productQuantity)
-        cell.SaleButton.addAction(UIAction(title: "Action", image: nil, identifier: nil, discoverabilityTitle: "", attributes: .destructive, state: .on, handler: { (_) in
-            print("sale product")
-            cell.quantityLabel.text = String(item.productQuantity - 1)
-            self.arrOfProducts[indexPath.row].productQuantity -= 1
-            try! self.context.save()
+        cell.SaleButton.addAction(UIAction(handler: { (_) in
+            if item.productQuantity > 0{
+                print("sale product")
+                cell.quantityLabel.text = String(item.productQuantity - 1)
+                self.arrOfProducts[indexPath.row].productQuantity -= 1
+                try! self.context.save()
+            }else{
+                print("Count is zero")
+                cell.quantityLabel.text = ("0")
+                self.arrOfProducts[indexPath.row].productQuantity = 0
+                try! self.context.save()
+            }
         }), for: .touchUpInside)
         return cell
     }
